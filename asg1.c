@@ -1,17 +1,16 @@
 #include<stdio.h>
 int main()
 {
-        int i,n,t[10],rt[10] ;
-        printf("Number of process: ");
+        int i,n,t[10],time[10] ;
+        printf("No. process: ");
         scanf("%d",&n);
-        printf("Enter the data\n");
         i=0;
         while(i<n)
 
         {
-                printf("Response time of P%d : ",i);
-                scanf("%d",&rt[i]);
-                if(rt[i]<1000)
+                printf("Service time for P%d : ",i);
+                scanf("%d",&time[i]);
+                if(time[i]<5000)
                 {
                         t[i]=1;
                 }
@@ -21,21 +20,20 @@ int main()
                 }
                 i++;
         }
-        printf("No.Process \t Response Time \t Type \t \t Priority");
+        printf("No.Process\tService Time\t         Priority\tType");
         i=0;
         while(i<n)
         {
-                printf("\nP%d \t \t %dms \t \t",i,rt[i]);
+                printf("\nP%d\t\t%dms \t\t\t",i,time[i]);
                 if(t[i]==1)
                 {
-                        printf("Interactive \t High");
+                        printf("High \t\t Interactive");
                 }
                 else
                 {
-                        printf("Non-Interactive \t Low");
+                        printf("Low \t\t Non-Interactive");
                 } 
                 i++;
 
         }
 }
-
