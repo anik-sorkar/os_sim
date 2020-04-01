@@ -14,7 +14,7 @@ student having the third thing makes the assignment and tells the teacher on com
 This cycle continues. WAP to synchronize the teacher and the students.
 
 Explanation: 1. In the given solution I have taken all the student processes and resources in 2D array and initialized then to 0. 
-             2. I have made 3 student processes in three different functions which will be executed by single s_thread and one t_thread for                 execution of teacher process. 
+             2. I have made 3 student processes in three different functions which will be executed by single s_thread and one t_thread                 for execution of teacher process. 
              3. User will get a menu to select any two out of three resources that are to be placed on shared table. 
              4. If one process is completed there will be a message printed on the screen saying process is completed. 
              5. When one process is executing no other student or teacher process will execute and for achieving this I have used Mutex                     lock. 
